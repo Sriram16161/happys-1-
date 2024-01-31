@@ -1,0 +1,1 @@
+export { ContactGrade } from './ContactGrade';

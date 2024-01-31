@@ -1,0 +1,1 @@
+export { CloseExtensionButton } from './CloseExtensionButton';

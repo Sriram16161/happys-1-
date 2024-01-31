@@ -1,0 +1,1 @@
+export { CompanyIndustry } from './CompanyIndustry';

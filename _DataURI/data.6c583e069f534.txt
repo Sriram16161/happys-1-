@@ -1,0 +1,1 @@
+chrome-extension://ciladpeminmmpbedkmchpkalflkpmfap/js/content-script.js

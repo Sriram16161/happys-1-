@@ -1,0 +1,1 @@
+export { MetricIcon } from './MetricIcon';

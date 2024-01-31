@@ -1,0 +1,1 @@
+export { InsightsContainer } from './InsightsContainer';

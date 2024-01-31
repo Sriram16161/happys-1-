@@ -1,0 +1,1 @@
+chrome-extension://klkjmhdaphpphfpjmoildepjppjmckeo/script/content-AllPages-Auto-Extractor.js

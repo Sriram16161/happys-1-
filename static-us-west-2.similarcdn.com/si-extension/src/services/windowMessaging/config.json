@@ -1,0 +1,287 @@
+[
+  {
+    "url": "https://www.linkedin.com/in/",
+    "elements": [
+      {
+        "name": "Full Name",
+        "selector": "main h1"
+      },
+      {
+        "name": "Company Name",
+        "selector": "button[aria-label*='Current company']"
+      },
+      {
+        "name": "Title",
+        "selectors": [
+          "main section > #experience ~ div > ul > li > div > div:nth-child(2) > div:nth-child(2) > ul > li a > div span",
+          "main section > #experience ~ div > ul > li > div > div:nth-child(2) > div > div > div span"
+        ]
+      },
+      {
+        "name": "Location",
+        "selector": "main section > div:nth-child(2) > div:nth-child(2) ul + div span"
+      },
+      {
+        "name": "Current Companies URLs",
+        "selector": "a[data-field='experience_company_logo'][href*='linkedin.com/company/']",
+        "attributes": ["href"],
+        "multiple": "true",
+        "within": "main section > #experience ~ div > ul > li",
+        "filter": {
+          "selectors": [
+            "div > div:nth-child(2) > div > div span:nth-child(3) > span",
+            "div > div:nth-child(2) > div:nth-child(2) > ul > li a > span.t-black--light"
+          ],
+          "text": "Present"
+        }
+      },
+      {
+        "name": "Current Companies Names",
+        "selector": "div > div:nth-child(2) > div > div > span:nth-child(2) > span",
+        "attributes": ["href"],
+        "multiple": "true",
+        "keepEmpty": "true",
+        "within": "main section > #experience ~ div > ul > li",
+        "filter": {
+          "selectors": [
+            "div > div:nth-child(2) > div > div span:nth-child(3) > span",
+            "div > div:nth-child(2) > div:nth-child(2) > ul > li a > span.t-black--light"
+          ],
+          "text": "Present"
+        }
+      },
+      {
+        "name": "Current Companies Names from lists",
+        "selector": "a[data-field='experience_company_logo'][href*='linkedin.com/company/'] span",
+        "attributes": ["href"],
+        "multiple": "true",
+        "keepEmpty": "true",
+        "within": "main section > #experience ~ div > ul > li",
+        "filter": {
+          "selectors": [
+            "div > div:nth-child(2) > div > div span:nth-child(3) > span",
+            "div > div:nth-child(2) > div:nth-child(2) > ul > li a > span.t-black--light"
+          ],
+          "text": "Present"
+        }
+      }
+    ]
+  },
+  {
+    "url": "https://www.linkedin.com/company/",
+    "elements": [
+      {
+        "name": "Company Name",
+        "selector": "main h1"
+      },
+      {
+        "name": "Company Website",
+        "selector": "main > div:nth-child(1) > section a[target='_blank']:not([href*='linkedin.com/sales/'])",
+        "attributes": ["href"]
+      }
+    ]
+  },
+  {
+    "url": "https://www.linkedin.com/search/results/people/",
+    "elements": [
+      {
+        "name": "Search names",
+        "selector": ".entity-result__title-text > a",
+        "attributes": ["href"],
+        "multiple": "true",
+        "keepEmpty": "true"
+      },
+      {
+        "name": "Search positions",
+        "selector": ".entity-result__primary-subtitle",
+        "multiple": "true",
+        "keepEmpty": "true"
+      },
+      {
+        "name": "Search summaries",
+        "selector": ".entity-result__summary",
+        "multiple": "true",
+        "keepEmpty": "true"
+      },
+      {
+        "name": "Search locations",
+        "selector": ".entity-result__secondary-subtitle",
+        "multiple": "true",
+        "keepEmpty": "true"
+      }
+    ]
+  },
+  {
+    "url": "https://www.linkedin.com/search/results/all",
+    "elements": [
+      {
+        "name": "Search names",
+        "selector": "span.t-16 a[href^='https://www.linkedin.com/in/']",
+        "multiple": "true",
+        "attributes": ["href"],
+        "keepEmpty": "true"
+      },
+      {
+        "name": "Search positions",
+        "selector": ".entity-result__primary-subtitle",
+        "multiple": "true",
+        "keepEmpty": "true"
+      },
+      {
+        "name": "Search summaries",
+        "selector": ".entity-result__summary",
+        "multiple": "true",
+        "keepEmpty": "true"
+      },
+      {
+        "name": "Search locations",
+        "selector": ".entity-result__secondary-subtitle",
+        "multiple": "true",
+        "keepEmpty": "true"
+      },
+      {
+        "name": "Contact name",
+        "selector": ".search-results-container > div > div.artdeco-card > ul > li > div > a span.entity-result__title-text a[href^='https://www.linkedin.com/in/']",
+        "attributes": ["href"]
+      },
+      {
+        "name": "Contact position",
+        "selector": ".search-results-container > div > div.artdeco-card > ul > li > div > a[href^='https://www.linkedin.com/in/'] div.entity-result__primary-subtitle"
+      },
+      {
+        "name": "Contact location",
+        "selector": ".search-results-container > div > div.artdeco-card > ul > li > div a[href^='https://www.linkedin.com/in/'] div.entity-result__secondary-subtitle"
+      },
+      {
+        "name": "Contact summary",
+        "selector": ".search-results-container > div > div.artdeco-card > ul > li > div a[href^='https://www.linkedin.com/in/'] div.reusable-search-simple-insight__text-container"
+      }
+    ]
+  },
+  {
+    "url": "https://www.linkedin.com/sales/lead/",
+    "elements": [
+      {
+        "name": "Full Name",
+        "selector": "h1[data-anonymize='person-name']"
+      },
+      {
+        "name": "Company Name",
+        "selector": "#profile-card-section a[data-anonymize='company-name']:not([class*='previous'])",
+        "attributes": ["href"],
+        "multiple": "true",
+        "keepEmpty": "true"
+      },
+      {
+        "name": "Previous Company Name",
+        "selector": "#profile-card-section a[data-anonymize='company-name'][class*='previous']",
+        "attributes": ["href"],
+        "multiple": "true",
+        "keepEmpty": "true"
+      },
+      {
+        "name": "Title",
+        "selector": "#profile-card-section span[data-anonymize='job-title']"
+      },
+      {
+        "name": "Location",
+        "selector": "#profile-card-section section > div > div:nth-child(4) > div"
+      },
+      {
+        "name": "Linkedin URL",
+        "scenario": {
+          "name": "collectDropdownItem",
+          "params": {
+            "triggerSelector": "#profile-card-section button[id^='hue-menu-trigger-ember']",
+            "itemSelector": "a[href*='linkedin.com/in/']"
+          }
+        },
+        "attributes": ["href"],
+        "once": "true"
+      }
+    ]
+  },
+  {
+    "url": "https://www.linkedin.com/sales/company/",
+    "elements": [
+      {
+        "name": "Company Website",
+        "selector": "#account [data-control-name='visit_company_website']",
+        "attributes": ["href"]
+      }
+    ]
+  },
+  {
+    "url": "https://www.linkedin.com/sales/search/people",
+    "elements": [
+      {
+        "name": "Search names",
+        "selector": "#search-results-container ol.artdeco-list > li span[data-anonymize='person-name']",
+        "multiple": "true",
+        "keepEmpty": "true"
+      },
+      {
+        "name": "Search positions",
+        "selector": "span[data-anonymize='title']",
+        "multiple": "true",
+        "within": "#search-results-container ol.artdeco-list > li .artdeco-entity-lockup__subtitle",
+        "keepEmpty": "true"
+      },
+      {
+        "name": "Search locations",
+        "selector": "#search-results-container span[data-anonymize='location']",
+        "multiple": "true",
+        "keepEmpty": "true"
+      },
+      {
+        "name": "Search companies",
+        "selector": "[data-anonymize='company-name']",
+        "multiple": "true",
+        "attributes": ["href"],
+        "within": "#search-results-container ol.artdeco-list > li .artdeco-entity-lockup__content",
+        "keepEmpty": "true"
+      },
+      {
+        "name": "Search summaries",
+        "selector": "div > span[data-anonymize='title']",
+        "multiple": "true",
+        "within": "#search-results-container ol.artdeco-list > li .artdeco-entity-lockup__content",
+        "keepEmpty": "true"
+      },
+      {
+        "name": "Results count",
+        "selector": "main > div > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(5) > span"
+      }
+    ]
+  },
+  {
+    "url": "https://www.linkedin.com/sales/lists/people/",
+    "elements": [
+      {
+        "name": "Search names",
+        "selector": "a[data-anonymize='person-name']",
+        "multiple": "true",
+        "keepEmpty": "true"
+      },
+      {
+        "name": "Search positions",
+        "selector": "div[data-anonymize='job-title']",
+        "multiple": "true",
+        "keepEmpty": "true"
+      },
+      {
+        "name": "Search locations",
+        "selector": "table td[data-anonymize='location']",
+        "multiple": "true",
+        "keepEmpty": "true"
+      },
+      {
+        "name": "Search companies",
+        "selector": "div.company-entity a",
+        "multiple": "true",
+        "attributes": ["href"],
+        "keepEmpty": "true"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1 @@
+chrome-extension://fofjcndophjadilglgimelemjkjblgpf/assets/fonts/poppins/Poppins-Regular.woff2
